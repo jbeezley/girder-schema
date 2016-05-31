@@ -1,0 +1,15 @@
+{
+  "name": "girder-schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.8.14",
+    "mocker-data-generator": "^1.2.2"
+  }
+}
