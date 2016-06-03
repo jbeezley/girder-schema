@@ -1,18 +1,12 @@
-var user = {
-    _accessLevel: {
-        values: [-1, 0, 1, 2, 100]
-    },
-    _id: {
-        chance: 'hash({length: 24})'
-    },
+var model = require('./model');
+var access = require('./access-control');
+
+module.exports = Object.assign({
     _modelType: {
         static: 'user'
     },
     admin: {
         chance: 'bool'
-    },
-    created: {
-        faker: 'date.past'
     },
     firstName: {
         faker: 'name.firstName'
@@ -26,6 +20,4 @@ var user = {
     public: {
         chance: 'bool'
     }
-};
-
-module.exports = user;
+}, access, model);

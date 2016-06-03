@@ -1,8 +1,6 @@
+var common = require('./common');
 
-module.exports = {
-    _id: {
-        chance: 'hash({length: 24})'
-    },
+module.exports = Object.assign({
     _modelType: {
         static: 'item'
     },
@@ -12,27 +10,11 @@ module.exports = {
     },
     baseParentType: {
         static: 'user'
-    },
-    created: {
-        faker: 'date.past'
-    },
-    creatorId: {
-        hasOne: 'user',
-        get: '_id'
-    },
-    description: {
-        faker: 'lorem.sentence'
     },/*
     folderId: {
         hasOne: 'folder'
     },*/
-    name: {
-        faker: 'commerce.productName'
-    },
     size: {
         faker: 'random.number'
-    },
-    updated: {
-        faker: 'date.past'
     }
-};
+}, common);

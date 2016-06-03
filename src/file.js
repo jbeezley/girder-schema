@@ -1,12 +1,8 @@
-module.exports = {
-    _id: {
-        chance: 'hash({length: 24})'
-    },
+var common = require('./common');
+
+module.exports = Object.assign({
     _modelType: {
         static: 'file'
-    },
-    created: {
-        faker: 'date.past'
     },
     creatorId: {
         hasOne: 'user',
@@ -25,4 +21,4 @@ module.exports = {
     size: {
         faker: 'random.number'
     }
-};
+}, common);
